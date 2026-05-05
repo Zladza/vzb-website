@@ -65,8 +65,44 @@ function initMobileMenu() {
   });
 }
 
+const FOOTER_HTML = `
+<div class="footer-inner container">
+  <div class="footer-col footer-brand">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-vzb">VZB</span>
+      <span class="logo-sub">CAPITAL & ADVISORY</span>
+    </a>
+    <p class="footer-copy" data-i18n="footer_copy">© 2026 VZB Capital & Advisory d.o.o. All rights reserved.</p>
+  </div>
+  <div class="footer-col">
+    <h4 class="footer-heading" data-i18n="footer_links">Quick Links</h4>
+    <nav class="footer-nav">
+      <a href="about.html" data-i18n="nav_about">About</a>
+      <a href="services.html" data-i18n="nav_services">Services</a>
+      <a href="projects.html" data-i18n="nav_projects">Projects</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-col">
+    <h4 class="footer-heading" data-i18n="footer_contact_heading">Contact</h4>
+    <div class="footer-contact">
+      <a href="mailto:vladimirbeslagic@gmail.com">vladimirbeslagic@gmail.com</a>
+      <a href="tel:+381112407076">+381 11 240 7076</a>
+      <span>Starine Novaka 3, Beograd</span>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom">
+  <div class="container">
+    <span>Belgrade, Serbia · Western Balkans</span>
+  </div>
+</div>
+`;
+
 function injectFooter() {
-  // Defined in Task 4
+  const footerEl = document.getElementById('footer');
+  if (!footerEl) return;
+  footerEl.innerHTML = FOOTER_HTML;
 }
 
 const translations = {
