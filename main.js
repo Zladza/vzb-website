@@ -51,15 +51,16 @@ function initNavScroll() {
 }
 
 function initMobileMenu() {
+  const links = document.getElementById('navLinks');
+  const hamburger = document.getElementById('navHamburger');
+  if (!links || !hamburger) return;
   document.addEventListener('click', e => {
-    const btn = e.target.closest('#navHamburger');
-    const links = document.getElementById('navLinks');
-    if (btn && links) {
+    if (e.target.closest('#navHamburger')) {
       links.classList.toggle('open');
-      btn.classList.toggle('open');
-    } else if (!e.target.closest('.nav-inner') && links) {
+      hamburger.classList.toggle('open');
+    } else if (!e.target.closest('.nav-inner')) {
       links.classList.remove('open');
-      document.getElementById('navHamburger')?.classList.remove('open');
+      hamburger.classList.remove('open');
     }
   });
 }

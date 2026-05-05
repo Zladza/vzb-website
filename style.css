@@ -192,7 +192,7 @@ p { color: var(--body); line-height: 1.7; }
   transition: color 0.2s;
 }
 .lang-btn:hover, .lang-btn.active { color: var(--accent); }
-.lang-sep { color: var(--border); font-size: 0.8rem; }
+.lang-sep { color: var(--body); opacity: 0.3; font-size: 0.8rem; }
 
 /* === Hamburger (mobile only) === */
 .nav-hamburger {
