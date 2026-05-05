@@ -410,3 +410,101 @@ p { color: var(--body); line-height: 1.7; }
 }
 .cta-banner h2 { margin-bottom: 16px; }
 .cta-banner p { margin-bottom: 36px; font-size: 1rem; }
+
+/* === Page hero (inner pages) === */
+.page-hero {
+  padding: calc(var(--nav-height) + 80px) 0 80px;
+  border-bottom: 1px solid var(--border);
+}
+.page-hero h1 { margin-bottom: 20px; }
+.page-hero-sub {
+  font-size: 1.1rem;
+  max-width: 560px;
+  color: var(--body);
+}
+
+/* === Two column layout === */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.two-col h3 { margin-bottom: 0; }
+.two-col p { font-size: 0.95rem; line-height: 1.8; }
+
+/* === Narrow content === */
+.narrow { max-width: 720px; }
+.narrow p { font-size: 1rem; line-height: 1.8; }
+
+/* === Values grid === */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.value-card {
+  padding: 36px 24px;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+.value-card:hover { border-color: var(--accent); }
+.value-icon {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.value-card h3 { margin-bottom: 12px; }
+.value-card p { font-size: 0.87rem; line-height: 1.6; }
+
+/* === Services page — 6 cards in 2-col grid === */
+.service-cards-6 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* === Project cards === */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.project-card {
+  background: var(--section-alt);
+  border: 1px solid var(--border);
+  padding: 36px 32px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.project-country {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+.project-sector {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+.project-sector.transport { background: rgba(126,184,224,0.15); color: var(--accent); }
+.project-sector.energy { background: rgba(255,200,80,0.15); color: #ffc850; }
+.project-sector.urban { background: rgba(100,220,150,0.15); color: #64dc96; }
+.project-year {
+  font-size: 0.78rem;
+  color: var(--body);
+  margin-left: auto;
+}
+.project-card h3 { margin-bottom: 12px; }
+.project-card p { font-size: 0.9rem; line-height: 1.7; }
