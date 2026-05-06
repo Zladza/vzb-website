@@ -640,3 +640,59 @@ a.contact-item-value:hover { color: var(--heading); }
   padding: 12px 0 0;
 }
 .contact-form button[disabled] { opacity: 0.6; cursor: not-allowed; }
+
+/* === Responsive === */
+
+/* Tablet: 960px */
+@media (max-width: 960px) {
+  .service-cards { grid-template-columns: repeat(2, 1fr); }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+/* Mobile: 768px — show hamburger, collapse nav links */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    flex-direction: column;
+    padding: 16px 0 24px;
+    border-bottom: 1px solid var(--border);
+    gap: 0;
+  }
+  .nav-links.open { display: flex; }
+  .nav-link {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+  .nav-link::after { display: none; }
+  .nav-hamburger { display: flex; }
+
+  .two-col { grid-template-columns: 1fr; gap: 40px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .project-cards { grid-template-columns: 1fr; }
+  .service-cards-6 { grid-template-columns: 1fr; }
+
+  .hero-content { padding: 60px 24px; }
+  .section { padding: 64px 0; }
+  .page-hero { padding: calc(var(--nav-height) + 48px) 0 48px; }
+}
+
+/* Small mobile: 640px */
+@media (max-width: 640px) {
+  .container { padding: 0 20px; }
+  .service-cards { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr 1fr; }
+  .stats-inner { flex-direction: column; gap: 32px; }
+  .stat-divider { display: none; }
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  h1 { font-size: clamp(1.8rem, 8vw, 3rem); }
+  h2 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+}
