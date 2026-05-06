@@ -516,12 +516,14 @@ p { color: var(--body); line-height: 1.7; }
   text-align: center;
 }
 .member-avatar {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  background: var(--section-alt);
-  border: 2px solid var(--border);
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--border);
   margin: 0 auto 32px;
+  display: block;
 }
 .member-name {
   margin-bottom: 8px;
