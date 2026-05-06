@@ -9,7 +9,73 @@
 </head>
 <body>
   <nav id="nav" class="nav"></nav>
-  <main id="main"></main>
+  <main id="main">
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="label" data-i18n="contact_label">GET IN TOUCH</span>
+        <h1 data-i18n="contact_heading">Contact Us</h1>
+        <p class="page-hero-sub" data-i18n="contact_sub">We welcome enquiries from governments, investors, and developers with infrastructure projects across the Western Balkans.</p>
+      </div>
+    </section>
+
+    <!-- Contact Grid -->
+    <section class="section">
+      <div class="container contact-grid">
+
+        <!-- Left: Contact details + map -->
+        <div class="contact-info">
+          <h3 data-i18n="contact_details_heading">Contact Details</h3>
+          <div class="divider"></div>
+          <div class="contact-items">
+            <div class="contact-item">
+              <span class="contact-item-icon"><i class="fa-solid fa-envelope"></i></span>
+              <div class="contact-item-text">
+                <span class="contact-item-label" data-i18n="contact_email_label">Email</span>
+                <a class="contact-item-value" href="mailto:vladimirbeslagic@gmail.com" data-i18n="contact_email_value">vladimirbeslagic@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item-icon"><i class="fa-solid fa-phone"></i></span>
+              <div class="contact-item-text">
+                <span class="contact-item-label" data-i18n="contact_phone_label">Phone</span>
+                <a class="contact-item-value" href="tel:+381112407076" data-i18n="contact_phone_value">+381 11 240 7076</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <div class="contact-item-text">
+                <span class="contact-item-label" data-i18n="contact_address_label">Address</span>
+                <span class="contact-item-value" data-i18n="contact_address_value">Starine Novaka 3, 11000 Beograd, Serbia</span>
+              </div>
+            </div>
+          </div>
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.9123032396936!2d20.483399076691616!3d44.80326407107109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7aa883f4b015%3A0x17b2cede4dc3dfb6!2sStarine%20Novaka%203%2C%20Beograd%2011000!5e0!3m2!1sen!2srs!4v1714999999999!5m2!1sen!2srs"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="VZB Capital & Advisory office location">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Right: Contact form -->
+        <div class="contact-form-col">
+          <h3 data-i18n="contact_form_heading">Send a Message</h3>
+          <div class="divider"></div>
+          <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+            <input type="text" name="name" data-i18n="form_name" placeholder="Full Name" required>
+            <input type="email" name="email" data-i18n="form_email" placeholder="Email Address" required>
+            <input type="text" name="subject" data-i18n="form_subject" placeholder="Subject">
+            <textarea name="message" rows="5" data-i18n="form_message" placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn-primary" data-i18n="form_submit">Send Message</button>
+          </form>
+          <div class="form-success" id="formSuccess" style="display:none;" data-i18n="form_success">Thank you. We will be in touch shortly.</div>
+        </div>
+
+      </div>
+    </section>
+  </main>
   <footer id="footer" class="footer"></footer>
   <script src="main.js"></script>
 </body>

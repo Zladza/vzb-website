@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initI18n();
   initNavScroll();
   initMobileMenu();
+  initContactForm();
 });
 
 function injectNav() {
@@ -224,9 +225,14 @@ const translations = {
     contact_label: 'GET IN TOUCH',
     contact_heading: 'Contact Us',
     contact_sub: 'We welcome enquiries from governments, investors, and developers with infrastructure projects across the Western Balkans.',
+    contact_details_heading: 'Contact Details',
     contact_email_label: 'Email',
+    contact_email_value: 'vladimirbeslagic@gmail.com',
     contact_phone_label: 'Phone',
+    contact_phone_value: '+381 11 240 7076',
     contact_address_label: 'Address',
+    contact_address_value: 'Starine Novaka 3, 11000 Beograd, Serbia',
+    contact_form_heading: 'Send a Message',
     form_name: 'Full Name',
     form_email: 'Email Address',
     form_subject: 'Subject',
@@ -358,9 +364,14 @@ const translations = {
     contact_label: 'STUPITE U KONTAKT',
     contact_heading: 'Kontaktirajte Nas',
     contact_sub: 'Dobrodošli su upiti vlada, investitora i programera sa infrastrukturnim projektima na Zapadnom Balkanu.',
+    contact_details_heading: 'Kontakt Podaci',
     contact_email_label: 'Email',
+    contact_email_value: 'vladimirbeslagic@gmail.com',
     contact_phone_label: 'Telefon',
+    contact_phone_value: '+381 11 240 7076',
     contact_address_label: 'Adresa',
+    contact_address_value: 'Starine Novaka 3, 11000 Beograd, Srbija',
+    contact_form_heading: 'Pošaljite Poruku',
     form_name: 'Ime i Prezime',
     form_email: 'Email Adresa',
     form_subject: 'Predmet',
@@ -384,6 +395,32 @@ function initI18n() {
     const newLang = btn.dataset.lang;
     localStorage.setItem('vzb-lang', newLang);
     applyTranslations(newLang);
+  });
+}
+
+function initContactForm() {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const success = document.getElementById('formSuccess');
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        if (success) success.style.display = 'block';
+      } else {
+        btn.disabled = false;
+      }
+    } catch {
+      btn.disabled = false;
+    }
   });
 }
 
