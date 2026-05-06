@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initI18n();
   initNavScroll();
   initMobileMenu();
-  initScrollReveal();
   initContactForm();
 });
 
@@ -399,22 +398,6 @@ function initI18n() {
   });
 }
 
-function initScrollReveal() {
-  const targets = document.querySelectorAll(
-    '.service-card, .value-card, .project-card, .stat, .section-header, .team-member, .contact-info, .contact-form-col, .two-col > div'
-  );
-  if (!targets.length || !('IntersectionObserver' in window)) return;
-  targets.forEach(el => el.classList.add('reveal'));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  targets.forEach(el => io.observe(el));
-}
 
 function initContactForm() {
   const form = document.querySelector('.contact-form');
