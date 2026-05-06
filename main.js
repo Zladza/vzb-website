@@ -89,13 +89,13 @@ const FOOTER_HTML = `
     <div class="footer-contact">
       <a href="mailto:vladimirbeslagic@gmail.com">vladimirbeslagic@gmail.com</a>
       <a href="tel:+381112407076">+381 11 240 7076</a>
-      <span>Starine Novaka 3, Beograd</span>
+      <span data-i18n="footer_address">Starine Novaka 3, Beograd</span>
     </div>
   </div>
 </div>
 <div class="footer-bottom">
   <div class="container">
-    <span>Belgrade, Serbia · Western Balkans</span>
+    <span data-i18n="footer_bottom">Belgrade, Serbia · Western Balkans</span>
   </div>
 </div>
 `;
@@ -244,6 +244,8 @@ const translations = {
     footer_copy: '© 2026 VZB Capital & Advisory d.o.o. All rights reserved.',
     footer_links: 'Quick Links',
     footer_contact_heading: 'Contact',
+    footer_address: 'Starine Novaka 3, Beograd',
+    footer_bottom: 'Belgrade, Serbia · Western Balkans',
   },
 
   sr: {
@@ -383,6 +385,8 @@ const translations = {
     footer_copy: '© 2026 VZB Capital & Advisory d.o.o. Sva prava zadržana.',
     footer_links: 'Brze Veze',
     footer_contact_heading: 'Kontakt',
+    footer_address: 'Starine Novaka 3, Beograd',
+    footer_bottom: 'Beograd, Srbija · Zapadni Balkan',
   }
 };
 
