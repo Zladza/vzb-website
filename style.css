@@ -516,12 +516,12 @@ p { color: var(--body); line-height: 1.7; }
   text-align: center;
 }
 .member-avatar {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+  width: 200px;
+  height: 240px;
+  border-radius: 4px;
   object-fit: cover;
   object-position: center top;
-  border: 3px solid var(--border);
+  border: 1px solid var(--border);
   margin: 0 auto 32px;
   display: block;
 }
