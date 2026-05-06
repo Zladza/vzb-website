@@ -641,6 +641,17 @@ a.contact-item-value:hover { color: var(--heading); }
 }
 .contact-form button[disabled] { opacity: 0.6; cursor: not-allowed; }
 
+/* === Scroll reveal === */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
 /* === Responsive === */
 
 /* Tablet: 960px */
