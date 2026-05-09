@@ -556,6 +556,51 @@ p { color: var(--body); line-height: 1.7; }
   max-width: 480px;
   margin: 0 auto;
 }
+.career-history {
+  margin: 48px 0;
+  text-align: left;
+}
+.career-heading {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 28px;
+}
+.career-item {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0 24px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+}
+.career-item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+.career-period {
+  font-size: 0.78rem;
+  color: var(--body);
+  opacity: 0.6;
+  padding-top: 3px;
+  white-space: nowrap;
+}
+.career-role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--heading);
+  margin-bottom: 4px;
+}
+.career-company {
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 3px;
+}
+.career-location {
+  font-size: 0.8rem;
+  color: var(--body);
+  opacity: 0.6;
+}
 
 /* === Contact page === */
 .contact-grid {
@@ -697,4 +742,6 @@ a.contact-item-value:hover { color: var(--heading); }
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   h1 { font-size: clamp(1.8rem, 8vw, 3rem); }
   h2 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+  .career-item { grid-template-columns: 1fr; gap: 4px; }
+  .career-period { margin-bottom: 8px; }
 }
