@@ -87,7 +87,7 @@ const FOOTER_HTML = `
   <div class="footer-col">
     <h4 class="footer-heading" data-i18n="footer_contact_heading">Contact</h4>
     <div class="footer-contact">
-      <a href="mailto:vladimirbeslagic@gmail.com">vladimirbeslagic@gmail.com</a>
+      <a href="mailto:vbeslagic@vzbcapital.com">vbeslagic@vzbcapital.com</a>
       <a href="tel:+381112407076">+381 11 240 7076</a>
       <span data-i18n="footer_address">Starine Novaka 3, Beograd</span>
     </div>
@@ -227,7 +227,7 @@ const translations = {
     contact_sub: 'We welcome enquiries from governments, investors, and developers with infrastructure projects across the Western Balkans.',
     contact_details_heading: 'Contact Details',
     contact_email_label: 'Email',
-    contact_email_value: 'vladimirbeslagic@gmail.com',
+    contact_email_value: 'vbeslagic@vzbcapital.com',
     contact_phone_label: 'Phone',
     contact_phone_value: '+381 11 240 7076',
     contact_address_label: 'Address',
@@ -368,7 +368,7 @@ const translations = {
     contact_sub: 'Dobrodošli su upiti vlada, investitora i programera sa infrastrukturnim projektima na Zapadnom Balkanu.',
     contact_details_heading: 'Kontakt Podaci',
     contact_email_label: 'Email',
-    contact_email_value: 'vladimirbeslagic@gmail.com',
+    contact_email_value: 'vbeslagic@vzbcapital.com',
     contact_phone_label: 'Telefon',
     contact_phone_value: '+381 11 240 7076',
     contact_address_label: 'Adresa',
